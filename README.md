@@ -12,6 +12,7 @@ TalkRecap is a Python-based script designed to simplify the process of recording
 ## Installation:
 
 
-pip install git+https://github.com/openai/whisper.git 
-pip install --ignore-requires-python -e git+https://github.com/Gurpreethgnis/pydiar.git#egg=pydiar
+Install Whisper: pip install git+https://github.com/openai/whisper.git
+
+Install Forked version of Pydiar : pip install --ignore-requires-python -e git+https://github.com/Gurpreethgnis/pydiar.git#egg=pydiar
 
