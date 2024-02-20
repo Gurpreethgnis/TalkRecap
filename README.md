@@ -30,7 +30,7 @@ Need to install some special repositories
 ## Example:
 ```python
 import os
-from TalkRecap.utils import read_audio_file, record_audio_to_file, loadSummarizer, transcribe_audio_with_diarization, perform_diarization, summarize_speaker
+from utils import read_audio_file, record_audio_to_file, loadSummarizer, transcribe_audio_with_diarization, perform_diarization, summarize_speaker
 
 # Initialize parameters
 summary_length = 250
