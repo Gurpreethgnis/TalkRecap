@@ -1,4 +1,4 @@
-import whisper, torch
+import os, whisper, torch
 import numpy as np
 from tqdm import tqdm
 import soundfile as sf
@@ -137,3 +137,13 @@ def summarize_speaker(model, transcribed_dict, tokenizer, summary_length = 250):
         summary_dict[key] = final_summary
         #print(final_summary)
     return summary_dict
+
+def get_audio_file(file_path):
+    if not os.path.exists(file_path):
+        # Record the audio file
+        print ("\nStarting to record the audio at "+str(file_path))
+        audio_data = record_audio_to_file(file_path)
+    else:
+        #read audio file
+        print ("\nAudio file already exists. Reading the file at "+str(file_path))
+        audio_data = read_audio_file(file_path)
