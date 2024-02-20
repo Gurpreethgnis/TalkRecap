@@ -53,7 +53,19 @@ print ('-'*50)
 print ("\n Transcribing audio ")
 transcribed_text, transcribed_dict = transcribe_audio_with_diarization(audio_data, segments)
 
-# Transcribe audio with speaker information
+# Summarize each speaker
 print ('-'*50)
 print ("\n summarizing each speaker ")
 summarized_dict = summarize_speaker(model, transcribed_dict,tokenizer, summary_length = summary_length)
+
+# Print Transcribed text and Summary for each speaker
+for key in transcribed_dict:
+    print ("\n"+"_"*50)
+    print ("Speaker: "+key)
+    print ("_"*50)
+    print ("### Transcribed Text ###\n")
+    print ('\n'.join(taranscribed_dict[key]))
+    print ("."*50)
+    print ("### Summarized Text ###\n")
+    print (summarized_dict[key])
+  
